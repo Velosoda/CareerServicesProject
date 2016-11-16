@@ -1,40 +1,50 @@
 package com.careerServices.MainApp;
 
 import java.io.IOException;
-import java.sql.*;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.ArrayList;
 
 import javax.servlet.ServletException;
-
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 
-public class ServletSearch extends HttpServlet 
-{
+public class ServletShowSemesterTable extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-
-    public ServletSearch() 
-    {
+       
+    /**
+     * @see HttpServlet#HttpServlet()
+     */
+    public ServletShowSemesterTable() {
         super();
+        // TODO Auto-generated constructor stub
     }
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException 
-	{
-		doPost(request, response);
+
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+      doPost(request,response);
 	}
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException 
+
+
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException
 	{
-		DB database = new DB();
-		ArrayList<ModelSearchResults> results = new ArrayList<ModelSearchResults>();
+		DB d = new DB();
+		String sem_input = request.getParameter("semester");
+		System.out.println(sem_input);
 		try
 		{
-			String searchType = request.getParameter("select");
-			String info = request.getParameter("typing");
-			System.out.println(searchType+" "+info);
-			Connection conn = database.getDataSource().getConnection();
+			Connection conn = d.getDataSource().getConnection();
 			Statement stmt = conn.createStatement();
-			ResultSet rs = stmt.executeQuery("Select * from student_form where " + searchType + " = " + info + " and Approved = False");
+			ResultSet rs = stmt.executeQuery("select * from student_form where Semester = '" + sem_input + "'");
+			ArrayList<ModelSearchResults> list = new ArrayList<ModelSearchResults>(); 
+			
+			
 			while(rs.next())
 			{	
 				ModelSearchResults msr = new ModelSearchResults();
@@ -62,18 +72,22 @@ public class ServletSearch extends HttpServlet
 				msr.setMyers_Briggs(rs.getString(22));
 				msr.setSemester(rs.getString(25));
 				msr.setComment(rs.getString(26));
-				results.add(msr);
+				list.add(msr);
 			}
 			stmt.close();
 			conn.close();
 			rs.close();
-		} 
-		catch (SQLException e) 
-		{
-			
+			request.setAttribute("list", list);
+			request.getRequestDispatcher("/View/semesterTable.jsp").forward(request, response);
 		}
-		request.setAttribute("results", results);
-		request.getRequestDispatcher("/View/searchResults.jsp").forward(request, response);
-	}
-
+		catch(SQLException e) 
+		{
+			String error = "No Results Found";
+			request.setAttribute("error", error);
+			request.getRequestDispatcher("/View/semesterSearch.jsp").forward(request, response);
+		}
+		
+    }
 }
+
+

@@ -24,15 +24,27 @@ public class ModelSearchResults
 	private String cops_Test;
 	private String myers_Briggs;
 	private String approve;
+	private String semester;
+	private String date;
 	private String comment;
-	
-	public String getcomment(){
+	public String getDate() {
+		return date;
+	}
+	public void setDate(String date) {
+		this.date = date;
+	}
+	public String getComment() {
 		return comment;
 	}
-	public void setcomment(String comment){
+	public void setComment(String comment) {
 		this.comment = comment;
 	}
-	
+	public String getSemester() {
+		return semester;
+	}
+	public void setSemester(String semester) {
+		this.semester = semester;
+	}
 	public String getApprove() {
 		return approve;
 	}
@@ -173,6 +185,4 @@ public class ModelSearchResults
 	public void setMyers_Briggs(String myers_Briggs) {
 		this.myers_Briggs = myers_Briggs;
 	}
-	
-	
 }
