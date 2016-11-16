@@ -7,13 +7,56 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
 </head>
-<body>
-<a href="Login" class="buttonLogout">Log out</a>
+<style>
+#main{
+  position: relative;
+}
+div#first{
+  background-image: url(https://upload.wikimedia.org/wikipedia/en/thumb/b/b6/Kean_University_Logo.svg/1034px-Kean_University_Logo.svg.png);
+  opacity: 0.25;
+  width:  100%;
+  height: 100%;
+  background-size: 75%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+div#second{
+  width:100%;
+  height: 100%;
+  position: absolute;
+  top: 0 ;
+  left:0;
+}
+body{
+  background-color: #87CEEB
+  }
+ body {
+    border: 10px solid #f1f1f1;
+}
+button[type=button]{
+    width: 20%;
+    display: inline-block;
+    color: White;
+    border-radius:20px;
+    box-sizing: border-box;
+    font-size: 100%;
+    position: static;    
+    border: none;
+    background-color: #4CAF50; 
+    padding: 14px 20px;
+    cursor:pointer;
+}
+</style>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+</head>
+<body> 
 <BR>
     <center>
 		<h1>Form Correction</h1>
 	</center>
-	<!-- took out the logout (Kelsey 10/13/16)-->
 <form action="FormCorrection" method="post">
 	<br>
 	<center>
@@ -38,14 +81,12 @@
 <br>
 <br>
 	<center>
-	
-	<br>
+<br>
 	Comment:<INPUT value="" NAME="comment" TYPE="text" SIZE="29" onmouseover="this.style.borderColor='black';this.style.backgroundColor='plum'"  
 style="width: 106; height: 21"  
 onmouseout="this.style.borderColor='black';this.style.backgroundColor='#ffffff'" style="border-width:1px;border-color=black">
     </center>
 <br>
-
 <input type = "submit" value= "Update"/>
 </form>
 </body>

@@ -75,20 +75,16 @@ body{
 }
 </style>
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<title>Search</title>
-	
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
 </head>
-	<body>
-	<h1 style="font-size:50px;">Student Search</h1> 
-		<form action="../../CareerServicesProject/Search" method="post">
-			<select name="select" id="select_k1" class="xla_k" style="width:200px;height:50px;font-size:25px;">
-		    	<option value="Select">Select</option>
-		    	<option value="ID">Student ID</option>
-		    	<option value="Name">Student Name</option>
-		    </select>
-			<input type="text" name="typing" placeholder="Search for the Key Words" value="" style="width:350px;height:50px;font-size:25px;">
+<body>
+	<h1 style="font-size:50px;">Semester Search</h1> 
+		<form action="../../CareerServicesProject/ShowSemesterTable" method="post">
+			<input type="text" name="semester" placeholder="Search By Semester EX. Fall/2016" value="" style="width:350px;height:50px;font-size:25px;">
 		    <input type="submit" value="Search" style="width:150px;height:50px;font-size:25px;">
 		</form>
-	</body>
+		<a href="../../CareerServicesProject/AdminHome"> Go Back to Admin Home</a>
+		<p>${error }</p>
+</body>
 </html>

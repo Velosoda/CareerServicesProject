@@ -92,6 +92,8 @@ h5{
 <body>
 <br>
 <center>
+    <a href="View/semesterSearch.jsp" class ="buttonView">Search for Student by Semester</a> 
+    <br><br><br><br><br>
 	<a href="View/Search.jsp" class="buttonView">Search for Students and Approve/Update Appointments</a>
 	<br><br><br><br><br>
 	<a href="AllAppointments" class="buttonVisits">View All Appointments(offline)</a>

@@ -2,6 +2,7 @@
     pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
+    
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
 <style>
@@ -10,7 +11,7 @@
 }
 div#first{
   background-image: url(https://upload.wikimedia.org/wikipedia/en/thumb/b/b6/Kean_University_Logo.svg/1034px-Kean_University_Logo.svg.png);
-  opacity: 0.15;
+  opacity: 0.25;
   width:  100%;
   height: 100%;
   background-size: 75%;
@@ -26,16 +27,15 @@ div#second{
   left:0;
 }
 h2 {
-    background-color: #FF9B05;
+    background-color: #663399;
     color: White;
     padding: 10px 10px;
     margin: 10px 0;
     border: 1px;
     border-radius:20px;
-    width: 15%;
+    width: 10%;
     font-size: 117%;
     text-align: center;
-
 }
 h1{
   background-color: #FF0569;
@@ -49,26 +49,23 @@ h1{
   text-align: center;
 }
 h3 {
-    background-color: #02e802;
+    background-color: #4169E1;
     color: White;
-    padding: 10px 10px;
-    margin: 10px 0;
-    border: 1px;
+    padding: 10px 1px;
+    margin: px 0;
+    border: 0px;
     border-radius:20px;
-    width: 30%;
+    width: 33%;
     font-size: 117%;
     text-align: center;
-
-}
-form {
-    border: 0px solid #f1f1f1;
-
 }
 body{
-  background-color: #CCFFFF;
-  font-size: 110%;
-  text-align: center;
-
+  background-color: #87CEEB;
+  border: 10px;
+}
+}
+    form {
+    border: 0px solid #f1f1f1;
 }
 input[type=text], input[type=password] {
     width: 25%;
@@ -78,23 +75,18 @@ input[type=text], input[type=password] {
     border: 4px solid #ccc;
     border-radius:10px;
     box-sizing: border-box;
-    font-size: 100%;
-    text-align: center;
 }
 .imgcontainer {
     text-align: center;
     margin: 1px 0 1px 0;
 }
-
 img.avatar {
-    width: 10%;
-    border-radius: 50%;
+    width: 20%;
+    border-radius: 100%;
 }
-
 .container {
     padding: 10px;
 }
-
 button {
     background-color: #4CAF50;
     color: White;
@@ -104,10 +96,22 @@ button {
     border-radius:20px;
     cursor: pointer;
     width: 20%;
-    font-size: 117%;
     }
+    .Reason{
+        column-count:3;
+        column-gap: 2px;
+    }
+    
     </style>
-    <script type="text/javascript">
+<body>
+  <div id="main">
+  <div id="first">
+  </div>
+  <div id="second">
+  <div class="imgcontainer">
+    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/b/b6/Kean_University_Logo.svg/1034px-Kean_University_Logo.svg.png" alt="Avatar" class="avatar">
+  </div>
+<script type="text/javascript">
     function validate()
     {
        if( document.studentSignIn.visitType.value == "" || document.studentSignIn.visitType.value == null)
@@ -140,11 +144,11 @@ button {
           document.studentSignIn.phoneNumber.focus() ;
           return false;
        }
-     //  if( document.studentSignIn.arrive.value == "" || document.studentSignIn.arrive.value == null)
-     //  {
-     //     alert( "Please provide your arrive" );
-      //    document.studentSignIn.arrive.focus() ;
-     //     return false;
+       if( document.studentSignIn.arrive.value == "" || document.studentSignIn.arrive.value == null)
+       {
+          alert( "Please provide your arrive" );
+          document.studentSignIn.arrive.focus() ;
+          return false;
        }
        if( document.studentSignIn.enTime.value == "" || document.studentSignIn.enTime.value == null)
        {
@@ -159,37 +163,34 @@ button {
           return false;
        }
        
-    	return true;
-    
-    
-    
+    	return true; 
     </script>
-<body>
-<a href="Login" class="buttonLogout">Log out</a>
 <BR>
     <center>
 		<h1>Welcome to Career Services</h1>
-	</center>
-	<!-- took out the logout (Kelsey 10/13/16)-->
+	
 <form action = "Success" method = "post" name="studentSignIn" onSubmit="validate();">
 	<input type ="radio" name = "visitType" value ="Walk In">Walk-in
 	<input type ="radio" name = "visitType" value ="Class">Class
 	<input type ="radio" name = "visitType"  value ="Appointment">Appointment
 	<input type ="radio" name = "visitType" value ="Workshop">Workshop
-	<center>
+	
+	</center>
+	<Center>
 		<br>
+		<label><b>Name</b></label>
 			<input type = "text" name = "name" placeholder="Name">
+		
+		<label><b>ID</b></label>
+			<input type = "text" name = "id" placeholder="ID" >
 		<br>
-		<br>
-			<input type = "text" name = "id" placeholder="ID" font-size="90%">
-		<br>
-		<br>
+		<label><b>E-Mail</b></label>
 			<input type = "text" name = "email" placeholder="Kean E-mail" >
-		<br>
-		<br>
+		<label><b>Phone Number</b></label>
 			<input type = "text" name = "phoneNumber" placeholder="Phone Number" >
-		<br>
-		<br>
+			<br>
+       <label><b>Arrival Time</b></label>
+			<input type ="text" name ="arrival" placeholder="Arrival Time">
 		<br>
 	</center>
 	<h2> Section A </h2>
@@ -202,34 +203,39 @@ button {
 	<br>
 	<h2>Section B </h2>
   	<center>
-		<input type ="radio" name = "enStat" value ="Freshmen"> Freshman<br>
-		<input type ="radio" name = "enStat" value ="Sophomore"> Sophomore<br>
-		<input type ="radio" name = "enStat" value ="Junior"> Junior<br>
-		<input type ="radio" name = "enStat" value ="Senior"> Senior<br>
-		<input type ="radio" name = "enStat" value ="Graduate"> Graduate Student<br>
-		<input type ="radio" name = "enStat" value ="Alumni"> Alumni<br>
-		<input type ="radio" name = "enStat" value ="Potential Student"> Potential Student<br>
-	</center>
+		<input type ="radio" name = "enStat" value ="Freshmen"> Freshman
+		<input type ="radio" name = "enStat" value ="Sophomore"> Sophomore
+		<input type ="radio" name = "enStat" value ="Junior"> Junior
+		<input type ="radio" name = "enStat" value ="Senior"> Senior
+		<input type ="radio" name = "enStat" value ="Graduate"> Graduate Student
+		<input type ="radio" name = "enStat" value ="Alumni"> Alumni
+		<input type ="radio" name = "enStat" value ="Potential Student"> Potential Student
 	<br>
+	</center>
 	<center>
 	    <h3><i>Please check the boxes that apply to your visit</i></h3>
-		<br>
-		Career Counseling <input type ="checkbox" name = "careerCounseling" value ="Career Counseling"><br>
-		Job Searching <input type ="checkbox" name = "jobSearching" value ="Job Searching"><br>
-		Resume <input type ="checkbox" name = "resume" value ="Resume"><br>
-		Cover Letter <input type ="checkbox" name = "coverLetter" value ="Cover Letter"><br>
-		Mock Interview <input type ="checkbox" name = "mockInterview" value ="Mock Interview"><br>
-		Internship Information <input type ="checkbox" name = "internshipInformation" value ="Internship Information"><br>
-		Transition to Kean <input type ="checkbox" name = "transitionToKean" value ="Transition To Kean"><br>
-		Sophomore Seminar <input type ="checkbox" name = "sophomoreSeminar" value ="Sophomore Seminar"><br>
-		Junior Seminar <input type ="checkbox" name = "juniorSeminar" value ="Junior Seminar"><br>
-		Senior Seminar <input type ="checkbox" name = "seniorSeminar" value ="Senior Seminar"><br>
-		Career <input type ="checkbox" name = "career" value ="Career"><br>
-		Cops Test <input type ="checkbox" name = "copsTest" value ="Cops Test"><br>
-		Myers Briggs <input type ="checkbox" name = "myersBriggs" value ="Myers Briggs"><br>
+	<br>
 	</center>
+	<div class="Reason">
+	Career <input type ="checkbox" name = "car" value ="car"><br>
+	Career Counseling <input type ="checkbox" name = "cc" value ="cc"><br>
+	Cops Test <input type ="checkbox" name = "cops" value ="cops"><br>	
+	Cover Letter <input type ="checkbox" name = "cov" value ="cov"><br>
+	Internship Information <input type ="checkbox" name = "ii" value ="ii"><br>
+	Job Searching <input type ="checkbox" name = "js" value ="js"><br>
+	Junior Seminar <input type ="checkbox" name = "js" value ="js"><br>
+	Mock Interview <input type ="checkbox" name = "moc" value ="moc"><br>
+	
+	Myers Briggs <input type ="checkbox" name = "mb" value ="mb"><br>
+	Resume <input type ="checkbox" name = "resume" value ="resume"><br>
+	Senior Seminar <input type ="checkbox" name = "sen_s" value ="sen_s"><br>
+	Sophomore Seminar <input type ="checkbox" name = "ss" value ="ss"><br>
+	Transition to Kean <input type ="checkbox" name = "t2k" value ="t2k"><br>
 <br>
+</div>
+<Center>
 <button type = "submit">Submit</button>
+</center>
 </form>
 </body>
 </html>
