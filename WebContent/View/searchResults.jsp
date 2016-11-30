@@ -78,5 +78,9 @@
 			</c:forEach>
 		</tbody>
 	</table>
+	<form action="../../CareerServicesProject/AdminHome" method = "Post">
+		<input type = "hidden" name = "bipass" value = bipass> 
+		<input type = "submit" value = "Go Back">
+	</form>
 </body>
 </html>

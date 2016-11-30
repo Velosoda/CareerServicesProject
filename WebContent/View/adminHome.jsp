@@ -87,7 +87,7 @@ h5{
 
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+<title>Admin Home</title>
 </head>
 <body>
 <br>
@@ -96,11 +96,10 @@ h5{
     <br><br><br><br><br>
 	<a href="View/Search.jsp" class="buttonView">Search for Students and Approve/Update Appointments</a>
 	<br><br><br><br><br>
-	<a href="AllAppointments" class="buttonVisits">View All Appointments(offline)</a>
-	<br><br><br><br><br>
-	<a href="VisitStats" class="buttonView">View Visit Statistics(offline)</a>
+	<a href="ClearTable" class="buttonView">Clear The Database(Only click if the records have been saved)</a>
 	<br><br><br><br><br>
 	<a href="Login" class="buttonLogout">Log out</a>
+	<p>${tableCleared}</p>
 </center>
 </body>
 </html>

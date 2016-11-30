@@ -21,7 +21,10 @@
 <body>
 	<h1>Appointment Approved or Updated!</h1>
 	<span class="text1"><a href="Search">Search</a></span>
-	<span class="text"><a href="AdminHome">AdminHome</a></span>
+	<form action="../../CareerServicesProject/AdminHome" method = "Post">
+			<input type = "hidden" name = "bipass" value = bipass> 
+			<input type = "submit" value = "Go Back">
+	</form>
 	
 </body>
 </html>

@@ -1,16 +1,13 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"                                                    "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-
 <title>Show Table</title>
 </head>
 <body>
-
-
 	<table border = "1">
 		<thead>
 			<tr>
@@ -65,13 +62,18 @@
 					<td><c:out value="${list.myers_Briggs}"/></td>
 					<td><c:out value="${list.semester}"/></td>
 					<td><c:out value="${list.comment}"/></td>
-					
 				</tr>
 			</c:forEach>
 		</tbody>
 	</table>
-	<a href="AdminHome"> Go Back to Admin Home</a>
+	<form action="../../CareerServicesProject/AdminHome" method = "Post">
+		<input type = "hidden" name = "bipass" value = bipass> 
+		<input type = "submit" value = "Go Back to Admin Home">
+	</form>
 	<br>
-	<a href="View/semesterSearch.jsp"> Go Back to Search</a>
+	<form action="../../CareerServicesProject/View/semesterSearch.jsp" method = "Post">
+			<input type = "hidden" name = "bipass" value = bipass> 
+			<input type = "submit" value = "Go Back to Search by Semester">
+	</form>
 </body>
 </html> 

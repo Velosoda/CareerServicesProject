@@ -3,6 +3,7 @@
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
+<title>Login</title>
 <style>
 body{
   background-color: #CCFFFF;
@@ -82,6 +83,7 @@ span.psw {
     <button type="submit"><b>LET ME IN !</b></button>
     <br>
     <input type="checkbox" checked="checked"> Remember me
+    <input type="hidden" value="first" name="bipass">
   </div>
 </center>
 

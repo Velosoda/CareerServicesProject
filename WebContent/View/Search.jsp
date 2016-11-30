@@ -90,5 +90,9 @@ body{
 			<input type="text" name="typing" placeholder="Search for the Key Words" value="" style="width:350px;height:50px;font-size:25px;">
 		    <input type="submit" value="Search" style="width:150px;height:50px;font-size:25px;">
 		</form>
+		<form action="../../CareerServicesProject/AdminHome" method = "Post">
+			<input type = "hidden" name = "bipass" value = bipass> 
+			<input type = "submit" value = "Go Back">
+		</form>
 	</body>
 </html>

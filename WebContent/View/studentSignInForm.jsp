@@ -4,7 +4,7 @@
 <html>
     
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+<title>Student Sign In Form</title>
 <style>
 #main{
   position: relative;
@@ -169,7 +169,7 @@ button {
     <center>
 		<h1>Welcome to Career Services</h1>
 	
-<form action = "Success" method = "post" name="studentSignIn" onSubmit="validate();">
+<form action = "../../CareerServicesProject/Success" method = "post" name="studentSignIn" onSubmit="validate();">
 	<input type ="radio" name = "visitType" value ="Walk In">Walk-in
 	<input type ="radio" name = "visitType" value ="Class">Class
 	<input type ="radio" name = "visitType"  value ="Appointment">Appointment
@@ -189,11 +189,7 @@ button {
 		<label><b>Phone Number</b></label>
 			<input type = "text" name = "phoneNumber" placeholder="Phone Number" >
 			<br>
-       <label><b>Arrival Time</b></label>
-			<input type ="text" name ="arrival" placeholder="Arrival Time">
-		<br>
 	</center>
-	<h2> Section A </h2>
   	<center>
 	<h3><b><i>Enrollment Status</i></b></h3>
   		<br>
@@ -201,7 +197,6 @@ button {
 			<input type ="radio" name = "enTime" value ="Part Time"> Part-time
 	</center>
 	<br>
-	<h2>Section B </h2>
   	<center>
 		<input type ="radio" name = "enStat" value ="Freshmen"> Freshman
 		<input type ="radio" name = "enStat" value ="Sophomore"> Sophomore
@@ -217,20 +212,22 @@ button {
 	<br>
 	</center>
 	<div class="Reason">
-	Career <input type ="checkbox" name = "car" value ="car"><br>
-	Career Counseling <input type ="checkbox" name = "cc" value ="cc"><br>
-	Cops Test <input type ="checkbox" name = "cops" value ="cops"><br>	
-	Cover Letter <input type ="checkbox" name = "cov" value ="cov"><br>
-	Internship Information <input type ="checkbox" name = "ii" value ="ii"><br>
-	Job Searching <input type ="checkbox" name = "js" value ="js"><br>
-	Junior Seminar <input type ="checkbox" name = "js" value ="js"><br>
-	Mock Interview <input type ="checkbox" name = "moc" value ="moc"><br>
+	<center>
+	Career <input type ="checkbox" name = "career" value ="Career"><br>
+	Career Counseling <input type ="checkbox" name = "careerCounseling" value ="Career Counseling"><br>
+	Cops Test <input type ="checkbox" name = "copsTest" value ="Cops Test"><br>	
+	Cover Letter <input type ="checkbox" name = "coverLetter" value ="Cover Letter"><br>
+	Internship Information <input type ="checkbox" name = "internshipInformation" value ="Internship Information"><br>
+	Job Searching <input type ="checkbox" name = "jobSearching" value ="Job Searching"><br>
+	Junior Seminar <input type ="checkbox" name = "juniorSeminar" value ="Junior Seminar"><br>
+	Mock Interview <input type ="checkbox" name = "mockInterview" value ="Mock Interview"><br>
 	
-	Myers Briggs <input type ="checkbox" name = "mb" value ="mb"><br>
-	Resume <input type ="checkbox" name = "resume" value ="resume"><br>
-	Senior Seminar <input type ="checkbox" name = "sen_s" value ="sen_s"><br>
-	Sophomore Seminar <input type ="checkbox" name = "ss" value ="ss"><br>
-	Transition to Kean <input type ="checkbox" name = "t2k" value ="t2k"><br>
+	Myers Briggs <input type ="checkbox" name = "myersBriggs" value ="Myers Briggs"><br>
+	Resume <input type ="checkbox" name = "resume" value ="Resume"><br>
+	Senior Seminar <input type ="checkbox" name = "seniorSeminar" value ="Senior Seminar"><br>
+	Sophomore Seminar <input type ="checkbox" name = "sophomoreSeminar" value ="Sophomore Seminar"><br>
+	Transition to Kean <input type ="checkbox" name = "transitionToKean" value ="Transition To Kean"><br>
+	</center>
 <br>
 </div>
 <Center>
