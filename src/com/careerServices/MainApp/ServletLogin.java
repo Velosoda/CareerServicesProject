@@ -28,26 +28,28 @@ public class ServletLogin extends HttpServlet
 	{
 		request.getRequestDispatcher("View/login.jsp").forward(request, response);
 	}
-	public static boolean validate(String username, String pwd) {
+	public static boolean validate(String username, String pwd) 
+	{
 		boolean status=false;
 		String url = "jdbc:mysql://sql9.freemysqlhosting.net:3306/sql9142409";
         String usname = "sql9142409";
         String password = "vjUyLx6eNN";
-		try{  
+		try
+		{  
 			Class.forName("com.mysql.jdbc.Driver");  
 			Connection con=DriverManager.getConnection(url,usname,password);  
 			      
 			PreparedStatement ps=(PreparedStatement) con.prepareStatement("select * from user where username=? and pwd=?");  
 			ps.setString(1,username);  
 			ps.setString(2,pwd);  
-			      
+		  
 			ResultSet rs=ps.executeQuery();  
-			status=rs.next();  
-			          
-			}catch(Exception e){System.out.println(e);}  
+			status=rs.next();         
+		}
+		catch(Exception e)
+		{
+			System.out.println(e);
+		}  
 			return status;  
-
-	
 	}
-
 }

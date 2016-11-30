@@ -3,6 +3,7 @@ package com.careerServices.MainApp;
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.*;
 import java.util.Calendar; 
 
 import javax.servlet.ServletException;
@@ -37,7 +38,7 @@ public class ServletValidation extends HttpServlet
 			int hour = c.get(Calendar.HOUR_OF_DAY);
 			int minute = c.get(Calendar.MINUTE);
 			String arrival = Integer.toString(hour) +":"+Integer.toString(minute);
-			
+			System.out.println(arrival);
 			
 			String visitType = request.getParameter("visitType");
 			String enTime = request.getParameter("enTime"); 
@@ -56,9 +57,10 @@ public class ServletValidation extends HttpServlet
 			String copsTest = request.getParameter("copsTest");
 			String myersbriggs = request.getParameter("myersBriggs");
 			String approved = "False";
+			System.out.println(approved+" "+ myersbriggs+" "+copsTest+" "+career);
 			
-			String query = "insert into student_form (ID,Name,Email,Phone_Number,Arrival,VisitType,EnrollmentTime,EnrollmentStatus,Career_Counseling,Job_Searching,Resume,Cover_Letter,Mock_Interview,Internship_Information,Transition_to_Kean,Sophomore_Seminar,Junior_Seminar,Senior_Seminar,Career,Cops_Test,Myers_Briggs,Approved)"
-					+ " values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?);";
+			String query = "insert into student_form (ID,Name,Email,Phone_Number,Arrival,VisitType,EnrollmentTime,EnrollmentStatus,Career_Counseling,Job_Searching,Resume,Cover_Letter,Mock_Interview,Internship_Information,Transition_to_Kean,Sophomore_Seminar,Junior_Seminar,Senior_Seminar,Career,Cops_Test,Myers_Briggs,Approved,Semester)"
+					+ " values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?);";
 			Connection conn = database.getDataSource().getConnection(); //create connection
 			System.out.println("connected");
 			PreparedStatement insert = conn.prepareStatement(query);
@@ -85,6 +87,41 @@ public class ServletValidation extends HttpServlet
 			insert.setString(21, myersbriggs);
 			insert.setString(22, approved);
 			
+			//Acquire Semester (Michael's edit starts here)
+			try
+			{
+				String extract_year_query = "select extract(year from Date) as DateYear,extract(month from Date) as DateMonth,extract(day from Date) as DateDay from student_form where Row_Index = (select max(Row_Index) from student_form)";
+				Statement stmt = conn.createStatement();
+				ResultSet rs = stmt.executeQuery(extract_year_query);
+				if (!rs.next() ) 
+				{
+				    System.out.println("no data present in result set");
+				}
+				int year = rs.getInt("DateYear");
+				int month = rs.getInt("DateMonth");
+				int day = rs.getInt("DateDay");
+				System.out.println("Year , Month and Day is " + year + " " +  month + " " + day);
+				String semester = "null";
+				
+				if(month >= 1 & month <= 5)
+				{
+					semester = "Spring";
+				}
+				else if (month >=9 & month <= 12)
+				{
+					semester = "Fall";
+				}
+				
+				semester +="/" ;
+				semester += Integer.toString(year);
+				System.out.println("The semester is " + semester);
+				insert.setString(23, semester);
+			}
+			catch(SQLException e)
+			{
+				System.out.println("something went wrong in michaels thing");
+			}
+			// End of Michael's edit edit
 			insert.execute();
 			System.out.println("Query Executed");
 			request.setAttribute("id", id);
@@ -110,12 +147,12 @@ public class ServletValidation extends HttpServlet
 			request.setAttribute("Approved", approved);
 			insert.close();
 			conn.close();
+			request.getRequestDispatcher("/View/successfulSignIn.jsp").forward(request, response);
 		}
 		catch(Exception e)
 		{
 			request.getRequestDispatcher("/View/failedSignIn.jsp").forward(request, response);
 		}
-		request.getRequestDispatcher("/View/successfulSignIn.jsp").forward(request, response);
 	}
 
 }

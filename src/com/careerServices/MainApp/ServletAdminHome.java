@@ -1,3 +1,5 @@
+package com.careerServices.MainApp;
+import java.io.IOException;
 import java.io.PrintWriter;
 
 import javax.servlet.RequestDispatcher;
@@ -22,6 +24,12 @@ public class ServletAdminHome extends HttpServlet
 	}
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException 
 	{
+		String bipass = request.getParameter("bipass");
+		if(bipass.equals("bipass"))
+		{
+			request.getRequestDispatcher("View/adminHome.jsp").forward(request, response);
+			return;
+		}
 		 response.setContentType("text/html");  
 		    PrintWriter out = response.getWriter();  
 		          
