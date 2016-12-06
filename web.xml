@@ -70,16 +70,20 @@
     <servlet-name>ServletFormCorrection</servlet-name>
     <url-pattern>/FormCorrection</url-pattern>
   </servlet-mapping>
-  
-  
-  
-  
-    <servlet>
+  <servlet>
     <servlet-name>ServletShowSemesterTable</servlet-name>
     <servlet-class>com.careerServices.MainApp.ServletShowSemesterTable</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>ServletShowSemesterTable</servlet-name>
     <url-pattern>/ShowSemesterTable</url-pattern>
+  </servlet-mapping>
+    <servlet>
+    <servlet-name>ServletClearTable</servlet-name>
+    <servlet-class>com.careerServices.MainApp.ServletClearTable</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ServletClearTable</servlet-name>
+    <url-pattern>/ClearTable</url-pattern>
   </servlet-mapping>
 </web-app>
