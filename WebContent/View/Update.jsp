@@ -29,7 +29,7 @@ div#second{
   left:0;
 }
 body{
-  background-color: #87CEEB
+  background-color: #8BA2E5
   }
  body {
     border: 10px solid #f1f1f1;
@@ -62,19 +62,19 @@ button[type=button]{
 	<center>
 	    <h3><i>Please check the boxes that apply to your visit</i></h3>
 		<br>
-		Career Counseling <input type ="checkbox" name = "careerCounseling" value ="Career Counseling"><br>
-		Job Searching <input type ="checkbox" name = "jobSearching" value ="Job Searching"><br>
-		Resume <input type ="checkbox" name = "resume" value ="Resume"><br>
-		Cover Letter <input type ="checkbox" name = "coverLetter" value ="Cover Letter"><br>
-		Mock Interview <input type ="checkbox" name = "mockInterview" value ="Mock Interview"><br>
-		Internship Information <input type ="checkbox" name = "internshipInformation" value ="Internship Information"><br>
-		Transition to Kean <input type ="checkbox" name = "transitionToKean" value ="Transition To Kean"><br>
-		Sophomore Seminar <input type ="checkbox" name = "sophomoreSeminar" value ="Sophomore Seminar"><br>
-		Junior Seminar <input type ="checkbox" name = "juniorSeminar" value ="Junior Seminar"><br>
-		Senior Seminar <input type ="checkbox" name = "seniorSeminar" value ="Senior Seminar"><br>
 		Career <input type ="checkbox" name = "career" value ="Career"><br>
+		Career Counseling <input type ="checkbox" name = "careerCounseling" value ="Career Counseling"><br>
 		Cops Test <input type ="checkbox" name = "copsTest" value ="Cops Test"><br>
-		Myers Briggs <input type ="checkbox" name = "myersBriggs" value ="Myers Briggs"><br>
+		Cover Letter <input type ="checkbox" name = "coverLetter" value ="Cover Letter"><br>
+		Internship Information <input type ="checkbox" name = "internshipInformation" value ="Internship Information"><br>
+		Job Searching <input type ="checkbox" name = "jobSearching" value ="Job Searching"><br>
+		Junior Seminar <input type ="checkbox" name = "juniorSeminar" value ="Junior Seminar"><br>		
+		Mock Interview <input type ="checkbox" name = "mockInterview" value ="Mock Interview"><br>
+		Myers Briggs <input type ="checkbox" name = "myersBriggs" value ="Myers Briggs"><br>		
+		Resume <input type ="checkbox" name = "resume" value ="Resume"><br>
+		Senior Seminar <input type ="checkbox" name = "seniorSeminar" value ="Senior Seminar"><br>
+		Sophomore Seminar <input type ="checkbox" name = "sophomoreSeminar" value ="Sophomore Seminar"><br>
+		Transition to Kean <input type ="checkbox" name = "transitionToKean" value ="Transition To Kean"><br>										
 		<input type="hidden" name="itemToCorrect" value="${index}"/>
 		<input type="hidden" name="UorA" value="postupdate"/>
 	</center>
