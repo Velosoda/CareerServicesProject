@@ -43,23 +43,24 @@ public class ServletValidation extends HttpServlet
 			String visitType = request.getParameter("visitType");
 			String enTime = request.getParameter("enTime"); 
 			String enStat = request.getParameter("enStat");
-			String careerCounseling = request.getParameter("careerCounseling"); 
-			String jobSearching = request.getParameter("jobSearching");
-			String resume = request.getParameter("resume");
-			String coverLetter = request.getParameter("coverLetter");
-			String mockInterview = request.getParameter("mockInterview");
-			String internshipInformation = request.getParameter("internshipInformation"); 
-			String transitionToKean = request.getParameter("transitionToKean");
-			String sophomoreSeminar = request.getParameter("sophomoreSeminar");
-			String juniorSeminar = request.getParameter("juniorSeminar");
-			String seniorSeminar = request.getParameter("seniorSeminar");
 			String career = request.getParameter("career");
-			String copsTest = request.getParameter("copsTest");
+			String careerCounseling = request.getParameter("careerCounseling"); 
+			String copsTest = request.getParameter("copsTest");						
+			String coverLetter = request.getParameter("coverLetter");			
+			String internshipInformation = request.getParameter("internshipInformation"); 
+			String jobSearching = request.getParameter("jobSearching");
+			String juniorSeminar = request.getParameter("juniorSeminar");
+			String mockInterview = request.getParameter("mockInterview");
 			String myersbriggs = request.getParameter("myersBriggs");
+			String resume = request.getParameter("resume");
+			String seniorSeminar = request.getParameter("seniorSeminar");
+			String sophomoreSeminar = request.getParameter("sophomoreSeminar");
+			String transitionToKean = request.getParameter("transitionToKean");
+			
 			String approved = "False";
 			System.out.println(approved+" "+ myersbriggs+" "+copsTest+" "+career);
 			
-			String query = "insert into student_form (ID,Name,Email,Phone_Number,Arrival,VisitType,EnrollmentTime,EnrollmentStatus,Career_Counseling,Job_Searching,Resume,Cover_Letter,Mock_Interview,Internship_Information,Transition_to_Kean,Sophomore_Seminar,Junior_Seminar,Senior_Seminar,Career,Cops_Test,Myers_Briggs,Approved,Semester)"
+			String query = "insert into student_form (ID,Name,Email,Phone_Number,Arrival,VisitType,EnrollmentTime,EnrollmentStatus,Career,Career_Counseling,Cops_Test,Cover_Letter,Internship_Information,Job_Searching,Junior_Seminar,Mock_Interview,Myers_Briggs,Resume,Senior_Seminar,Sophomore_Seminar,Transition_to_Kean,Approved,Semester)"
 					+ " values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?);";
 			Connection conn = database.getDataSource().getConnection(); //create connection
 			System.out.println("connected");
@@ -72,19 +73,19 @@ public class ServletValidation extends HttpServlet
 			insert.setString(6, visitType);
 			insert.setString(7, enTime);
 			insert.setString(8, enStat);
-			insert.setString(9, careerCounseling);
-			insert.setString(10, jobSearching);
-			insert.setString(11, resume);
+			insert.setString(9, career);
+			insert.setString(10, careerCounseling);
+			insert.setString(11, copsTest);
 			insert.setString(12, coverLetter);
-			insert.setString(13, mockInterview);
-			insert.setString(14, internshipInformation);
-			insert.setString(15, transitionToKean);
-			insert.setString(16, sophomoreSeminar);
-			insert.setString(17, juniorSeminar);
-			insert.setString(18, seniorSeminar);
-			insert.setString(19, career);
-			insert.setString(20, copsTest);
-			insert.setString(21, myersbriggs);
+			insert.setString(13, internshipInformation);
+			insert.setString(14, jobSearching);			
+			insert.setString(15, juniorSeminar);
+			insert.setString(16, mockInterview);
+			insert.setString(17, myersbriggs);
+			insert.setString(18, resume);
+			insert.setString(19, seniorSeminar);
+			insert.setString(20, sophomoreSeminar);
+			insert.setString(21, transitionToKean);															
 			insert.setString(22, approved);
 			
 			//Acquire Semester (Michael's edit starts here)
@@ -131,19 +132,19 @@ public class ServletValidation extends HttpServlet
 			request.setAttribute("Arrival", arrival);
 			request.setAttribute("enTime", enTime);
 			request.setAttribute("enStat", enStat);
-			request.setAttribute("careerCounseling",careerCounseling);
-			request.setAttribute("jobSearching",jobSearching);
-			request.setAttribute("resume",resume);
-			request.setAttribute("coverLetter",coverLetter);
-			request.setAttribute("mockInterview",mockInterview);
-			request.setAttribute("internshipInformation",internshipInformation);
-			request.setAttribute("transitionToKean",transitionToKean);
-			request.setAttribute("sophomoreSeminar",sophomoreSeminar);
-			request.setAttribute("juniorSeminar",juniorSeminar);
-			request.setAttribute("seniorSeminar",seniorSeminar);
 			request.setAttribute("career", career);
+			request.setAttribute("careerCounseling",careerCounseling);
 			request.setAttribute("copsTest",copsTest);
+			request.setAttribute("coverLetter",coverLetter);
+			request.setAttribute("internshipInformation",internshipInformation);
+			request.setAttribute("jobSearching",jobSearching);
+			request.setAttribute("juniorSeminar",juniorSeminar);						
+			request.setAttribute("mockInterview",mockInterview);
 			request.setAttribute("myersbriggs",myersbriggs);
+			request.setAttribute("resume",resume);
+			request.setAttribute("seniorSeminar",seniorSeminar);
+			request.setAttribute("sophomoreSeminar",sophomoreSeminar);
+			request.setAttribute("transitionToKean",transitionToKean);												
 			request.setAttribute("Approved", approved);
 			insert.close();
 			conn.close();
