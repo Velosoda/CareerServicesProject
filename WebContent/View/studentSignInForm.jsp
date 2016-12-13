@@ -60,14 +60,14 @@ h3 {
     text-align: center;
 }
 body{
-  background-color: #87CEEB;
+  background-color: #8BA2E5;
   border: 10px;
 }
 }
     form {
     border: 0px solid #f1f1f1;
 }
-input[type=text], input[type=password] {
+input[type=text], input[type=password], input[type=email] {
     width: 25%;
     padding: 8px 2px;
     margin: 5px 0;
@@ -88,7 +88,7 @@ img.avatar {
     padding: 10px;
 }
 button {
-    background-color: #4CAF50;
+    background-color: #16E210;
     color: White;
     padding: 14px 20px;
     margin: 3px 0;
@@ -101,7 +101,7 @@ button {
         column-count:3;
         column-gap: 2px;
     }
-    
+   
     </style>
 <body>
   <div id="main">
@@ -185,7 +185,7 @@ button {
 			<input type = "text" name = "id" placeholder="ID" >
 		<br>
 		<label><b>E-Mail</b></label>
-			<input type = "text" name = "email" placeholder="Kean E-mail" >
+			<input type = "email" name = "email" placeholder="Kean E-mail" >
 		<label><b>Phone Number</b></label>
 			<input type = "text" name = "phoneNumber" placeholder="Phone Number" >
 			<br>
@@ -221,7 +221,6 @@ button {
 	Job Searching <input type ="checkbox" name = "jobSearching" value ="Job Searching"><br>
 	Junior Seminar <input type ="checkbox" name = "juniorSeminar" value ="Junior Seminar"><br>
 	Mock Interview <input type ="checkbox" name = "mockInterview" value ="Mock Interview"><br>
-	
 	Myers Briggs <input type ="checkbox" name = "myersBriggs" value ="Myers Briggs"><br>
 	Resume <input type ="checkbox" name = "resume" value ="Resume"><br>
 	Senior Seminar <input type ="checkbox" name = "seniorSeminar" value ="Senior Seminar"><br>
