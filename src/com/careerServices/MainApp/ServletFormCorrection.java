@@ -47,19 +47,19 @@ public class ServletFormCorrection extends HttpServlet
 				msr.setVisitType(rs.getString(7));
 				msr.setEnrollmentTime(rs.getString(8));
 				msr.setEnrollmentStatus(rs.getString(9));
-				msr.setCarrer_Counseling(rs.getString(10));
-				msr.setJob_Searching(rs.getString(11));
-				msr.setResume(rs.getString(12));
+				msr.setCareer(rs.getString(10));
+				msr.setCareer_Counseling(rs.getString(11));
+				msr.setCops_Test(rs.getString(12));
 				msr.setCover_Letter(rs.getString(13));
-				msr.setMock_Interview(rs.getString(14));
-				msr.setInternship_Information(rs.getString(15));
-				msr.setTransition_To_Kean(rs.getString(16));
-				msr.setSophomore_Seminar(rs.getString(17));
-				msr.setJunior_Seminar(rs.getString(18));
-				msr.setSenior_Seminar(rs.getString(19));
-				msr.setCareer(rs.getString(20));
-				msr.setCops_Test(rs.getString(21));
-				msr.setMyers_Briggs(rs.getString(22));
+				msr.setInternship_Information(rs.getString(14));
+				msr.setJob_Searching(rs.getString(15));
+				msr.setJunior_Seminar(rs.getString(16));								
+				msr.setMock_Interview(rs.getString(17));
+				msr.setMyers_Briggs(rs.getString(18));
+				msr.setResume(rs.getString(19));
+				msr.setSenior_Seminar(rs.getString(20));
+				msr.setSophomore_Seminar(rs.getString(21));
+				msr.setTransition_To_Kean(rs.getString(22));														
 				msr.setApprove("True");
 				
 				results.add(msr);
@@ -98,35 +98,35 @@ public class ServletFormCorrection extends HttpServlet
 		}
 		else if(selection.equals("postupdate"))
 		{
-			String careerCounseling = request.getParameter("careerCounseling"); 
-			String jobSearching = request.getParameter("jobSearching");
-			String resume = request.getParameter("resume");
-			String coverLetter = request.getParameter("coverLetter");
-			String mockInterview = request.getParameter("mockInterview");
-			String internshipInformation = request.getParameter("internshipInformation"); 
-			String transitionToKean = request.getParameter("transitionToKean");
-			String sophomoreSeminar = request.getParameter("sophomoreSeminar");
-			String juniorSeminar = request.getParameter("juniorSeminar");
-			String seniorSeminar = request.getParameter("seniorSeminar");
 			String career = request.getParameter("career");
+			String careerCounseling = request.getParameter("careerCounseling"); 			
 			String copsTest = request.getParameter("copsTest");
+			String coverLetter = request.getParameter("coverLetter");
+			String internshipInformation = request.getParameter("internshipInformation");						 			
+			String jobSearching = request.getParameter("jobSearching");
+			String juniorSeminar = request.getParameter("juniorSeminar");
+			String mockInterview = request.getParameter("mockInterview");
 			String myersbriggs = request.getParameter("myersBriggs");
+			String resume = request.getParameter("resume");
+			String seniorSeminar = request.getParameter("seniorSeminar");
+			String sophomoreSeminar = request.getParameter("sophomoreSeminar");
+			String transitionToKean = request.getParameter("transitionToKean");						
 			String comment = request.getParameter("comment");
 			try
 			{
 				String query = "UPDATE student_form " + 
 				"SET Career_Counseling= '" +careerCounseling+ "', "
-						+ "Job_Searching='"+jobSearching+"', "
-						+ "Resume='"+resume+"', "
+						+ "Career='"+career+"', "
+				        + "Cops_Test='"+copsTest+"', "											
 						+ "Cover_Letter='"+coverLetter+"', "
 						+ "Mock_Interview='"+mockInterview+"', "
 						+ "Internship_Information='"+internshipInformation+"', "
-						+ "Transition_to_Kean='"+transitionToKean+"', "
-						+ "Sophomore_Seminar='"+sophomoreSeminar+"', "
+						+ "Job_Searching='"+jobSearching+"', "
 						+ "Junior_Seminar='"+juniorSeminar+"', "
+						+ "Resume='"+resume+"', "
 						+ "Senior_Seminar='"+seniorSeminar+"', "
-						+ "Career='"+career+"', "
-						+ "Cops_Test='"+copsTest+"', "
+						+ "Sophomore_Seminar='"+sophomoreSeminar+"', "
+						+ "Transition_to_Kean='"+transitionToKean+"', "																								
 						+ "comment='"+comment+"', "
 						+ "Myers_Briggs='"+myersbriggs+"' WHERE Row_Index = "+indexedItem;
 				System.out.println(query);
