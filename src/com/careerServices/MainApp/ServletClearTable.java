@@ -57,23 +57,22 @@ public class ServletClearTable extends HttpServlet {
 				String visitType = "null";
 				String enTime = "null"; 
 				String enStat = "null";
-				String careerCounseling = "null";
-				String jobSearching = "null";
-				String resume = "null";
-				String coverLetter = "null";
-				String mockInterview = "null";
-				String internshipInformation = "null";
-				String transitionToKean = "null";
-				String sophomoreSeminar = "null";
-				String juniorSeminar = "null";
-				String seniorSeminar = "null";
 				String career = "null";
+				String careerCounseling = "null";
 				String copsTest = "null";
+				String coverLetter = "null";
+				String internshipInformation = "null";
+				String jobSearching = "null";
+				String juniorSeminar = "null";								
+				String mockInterview = "null";
 				String myersbriggs = "null";
+				String resume = "null";
+				String seniorSeminar = "null";
+				String sophomoreSeminar = "null";
+				String transitionToKean = "null";																
 				String approved = "False";
-				String semester = "null";
-				
-				String query = "insert into student_form (ID,Name,Email,Phone_Number,Arrival,VisitType,EnrollmentTime,EnrollmentStatus,Career_Counseling,Job_Searching,Resume,Cover_Letter,Mock_Interview,Internship_Information,Transition_to_Kean,Sophomore_Seminar,Junior_Seminar,Senior_Seminar,Career,Cops_Test,Myers_Briggs,Approved,Semester)"
+				String semester = "null";				
+				String query = "insert into student_form (ID,Name,Email,Phone_Number,Arrival,VisitType,EnrollmentTime,EnrollmentStatus,Career,Career_Counseling,Cops_Test,Cover_Letter,Internship_Information,Job_Searching,Mock_Interview,Myers_Briggs,Resume,Senior_Seminar,Sophomore_Seminar,Transition_to_Kean,Junior_Seminar,Approved,Semester)"
 						+ " values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?);";
 				Connection conn2 = db.getDataSource().getConnection(); //create connection
 				System.out.println("connected");
@@ -86,19 +85,19 @@ public class ServletClearTable extends HttpServlet {
 				insert.setString(6, visitType);
 				insert.setString(7, enTime);
 				insert.setString(8, enStat);
-				insert.setString(9, careerCounseling);
-				insert.setString(10, jobSearching);
-				insert.setString(11, resume);
+				insert.setString(9, career);
+				insert.setString(10, careerCounseling);
+				insert.setString(11, copsTest);
 				insert.setString(12, coverLetter);
-				insert.setString(13, mockInterview);
-				insert.setString(14, internshipInformation);
-				insert.setString(15, transitionToKean);
-				insert.setString(16, sophomoreSeminar);
-				insert.setString(17, juniorSeminar);
-				insert.setString(18, seniorSeminar);
-				insert.setString(19, career);
-				insert.setString(20, copsTest);
-				insert.setString(21, myersbriggs);
+				insert.setString(13, internshipInformation);
+				insert.setString(14, jobSearching);
+				insert.setString(15, juniorSeminar);								
+				insert.setString(16, mockInterview);
+				insert.setString(17, myersbriggs);
+				insert.setString(18, resume);
+				insert.setString(19, seniorSeminar);	
+				insert.setString(20, sophomoreSeminar);
+				insert.setString(21, transitionToKean);																
 				insert.setString(22, approved);
 				insert.setString(23, semester);
 				insert.execute();
