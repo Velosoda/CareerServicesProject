@@ -10,19 +10,19 @@ public class ModelSearchResults
 	private String visitType;
 	private String enrollmentTime;
 	private String enrollmentStatus;
-	private String carrer_Counseling;
-	private String job_Searching;
-	private String resume;
-	private String cover_Letter;
-	private String mock_Interview;
-	private String internship_Information;
-	private String transition_To_Kean;
-	private String sophomore_Seminar;
-	private String junior_Seminar;
-	private String senior_Seminar;
 	private String career;
-	private String cops_Test;
-	private String myers_Briggs;
+	private String career_Counseling;
+	private String cops_Test;		
+	private String cover_Letter;
+	private String internship_Information;
+	private String job_Searching;
+	private String junior_Seminar;
+	private String mock_Interview;
+	private String myers_Briggs;	
+	private String resume;
+	private String senior_Seminar;
+	private String sophomore_Seminar;
+	private String transition_To_Kean;	
 	private String approve;
 	private String semester;
 	private String date;
@@ -107,11 +107,11 @@ public class ModelSearchResults
 	public void setEnrollmentStatus(String enrollmentStatus) {
 		this.enrollmentStatus = enrollmentStatus;
 	}
-	public String getCarrer_Counseling() {
-		return carrer_Counseling;
+	public String getCareer_Counseling() {
+		return career_Counseling;
 	}
-	public void setCarrer_Counseling(String carrer_Counseling) {
-		this.carrer_Counseling = carrer_Counseling;
+	public void setCareer_Counseling(String career_Counseling) {
+		this.career_Counseling = career_Counseling;
 	}
 	public String getJob_Searching() {
 		return job_Searching;
