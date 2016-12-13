@@ -3,6 +3,32 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
+<style>
+ 
+button{
+    width: 15%;
+    background-color:#16E210;
+    padding: 8px 2px;
+    margin: 5px 0;
+    display: inline-block;
+    border: 4px solid #ccc;
+    border-radius:10px;
+    box-sizing: border-box;width: 10%;
+    padding: 8px 2px;
+    margin: 5px 0;
+    display: inline-block;
+    border: 4px solid #ccc;
+    border-radius:10px;
+    box-sizing: border-box;
+}
+
+
+body{
+  background-color: #8BA2E5;
+  border:10px;
+}
+
+</style>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
@@ -19,19 +45,19 @@
 				<th>VisitType</th>
 				<th>EnrollmentTime</th>
 				<th>EnrollmentStatus</th>
-				<th>Carrer_Counseling</th>
-				<th>Job_Searching</th>
-				<th>Resume</th>
-				<th>Cover_Letter</th>
-				<th>Mock_Interview</th>
-				<th>Internship_Information</th>
-				<th>Transition_To_Kean</th>
-				<th>Sophomore_Seminar</th>
-				<th>Junior_Seminar</th>
-				<th>Senior_Seminar</th>
 				<th>Career</th>
+				<th>Career_Counseling</th>
 				<th>Cops_Test</th>
-				<th>Myers_Briggs</th>
+				<th>Cover_Letter</th>
+				<th>Internship_Information</th>
+				<th>Job_Searching</th>
+				<th>Junior_Seminar</th>
+				<th>Mock_Interview</th>
+				<th>Myers_Briggs</th>	
+				<th>Resume</th>
+				<th>Senior_Seminar</th>
+				<th>Sophomore_Seminar</th>
+				<th>Transition_To_Kean</th>
 				<th>Approve</th>
 				<th>Update</th>
 			</tr>
@@ -47,19 +73,19 @@
 					<td><c:out value="${results.visitType}"/></td>
 					<td><c:out value="${results.enrollmentTime}"/></td>
 					<td><c:out value="${results.enrollmentStatus}"/></td>
-					<td><c:out value="${results.carrer_Counseling}"/></td>
-					<td><c:out value="${results.job_Searching}"/></td>
-					<td><c:out value="${results.resume}"/></td>
-					<td><c:out value="${results.cover_Letter}"/></td>
-					<td><c:out value="${results.mock_Interview}"/></td>
-					<td><c:out value="${results.internship_Information}"/></td>
-					<td><c:out value="${results.transition_To_Kean}"/></td>
-					<td><c:out value="${results.sophomore_Seminar}"/></td>
-					<td><c:out value="${results.junior_Seminar}"/></td>
-					<td><c:out value="${results.senior_Seminar}"/></td>
 					<td><c:out value="${results.career}"/></td>
+					<td><c:out value="${results.career_Counseling}"/></td>
 					<td><c:out value="${results.cops_Test}"/></td>
+					<td><c:out value="${results.cover_Letter}"/></td>
+					<td><c:out value="${results.internship_Information}"/></td>
+					<td><c:out value="${results.job_Searching}"/></td>
+					<td><c:out value="${results.junior_Seminar}"/></td>					
+					<td><c:out value="${results.mock_Interview}"/></td>
 					<td><c:out value="${results.myers_Briggs}"/></td>
+					<td><c:out value="${results.resume}"/></td>
+					<td><c:out value="${results.senior_Seminar}"/></td>
+					<td><c:out value="${results.sophomore_Seminar}"/></td>
+					<td><c:out value="${results.transition_To_Kean}"/></td>																				
 					<td>
 						<form action="FormCorrection" method="Post">
 							<input type="hidden" name="itemToCorrect" value="${results.dbId}"/>
@@ -80,7 +106,7 @@
 	</table>
 	<form action="../../CareerServicesProject/AdminHome" method = "Post">
 		<input type = "hidden" name = "bipass" value = bipass> 
-		<input type = "submit" value = "Go Back">
+		<button type = "submit"><b>Go Back</b></button>
 	</form>
 </body>
 </html>
