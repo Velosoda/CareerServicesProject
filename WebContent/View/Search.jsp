@@ -30,19 +30,19 @@ h1{
   margin: 10px 0;
   border: 1px;
   border-radius:20px;
-  width: 40%;
+  width: 30%;
   font-size: 117%;
   text-align: center;
 } 
 input[type=submit]{
-    width: 25%;
-    background-color:#4CAf50;
+    width: 15%;
+    background-color:#16E210;
     padding: 8px 2px;
     margin: 5px 0;
     display: inline-block;
     border: 4px solid #ccc;
     border-radius:10px;
-    box-sizing: border-box;width: 25%;
+    box-sizing: border-box;width: 10%;
     padding: 8px 2px;
     margin: 5px 0;
     display: inline-block;
@@ -50,7 +50,7 @@ input[type=submit]{
     border-radius:10px;
     box-sizing: border-box;
 }
-input[type=text], {
+input[type=text] {
      width: 25%;
     padding: 8px 2px;
     margin: 5px 0;
@@ -66,7 +66,7 @@ input[type=text], {
     box-sizing: border-box;
 }
 body{
-  background-color: #87CEEB;
+  background-color: #8BA2E5;
   border:10px;
 }
 .xla_k
@@ -80,15 +80,15 @@ body{
 	
 </head>
 	<body>
-	<h1 style="font-size:50px;">Student Search</h1> 
+	<h1 style="font-size:35px;">Student Search</h1> 
 		<form action="../../CareerServicesProject/Search" method="post">
-			<select name="select" id="select_k1" class="xla_k" style="width:200px;height:50px;font-size:25px;">
+			<select name="select" id="select_k1" class="xla_k" style="width:150px;height:35px;font-size:20px;">
 		    	<option value="Select">Select</option>
 		    	<option value="ID">Student ID</option>
 		    	<option value="Name">Student Name</option>
 		    </select>
-			<input type="text" name="typing" placeholder="Search for the Key Words" value="" style="width:350px;height:50px;font-size:25px;">
-		    <input type="submit" value="Search" style="width:150px;height:50px;font-size:25px;">
+			<input type="text" name="typing" placeholder="Search for the Key Words">
+		    <input type="submit" value="Search">
 		</form>
 		<form action="../../CareerServicesProject/AdminHome" method = "Post">
 			<input type = "hidden" name = "bipass" value = bipass> 
