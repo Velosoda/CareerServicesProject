@@ -6,7 +6,7 @@
 <title>Login</title>
 <style>
 body{
-  background-color: #CCFFFF;
+  background-color: #8BA2E5;
   text-align: center;
 }
 
@@ -26,11 +26,11 @@ input[type=text], input[type=password] {
 }
 
 button {
-    background-color: #4CAF50;
+    background-color: #16E210;
     color: White;
     padding: 14px 20px;
     margin: 10px 0;
-    border: none;
+    border: 4px solid #ccc;
     border-radius:20px;
     cursor: pointer;
     width: 25%;
