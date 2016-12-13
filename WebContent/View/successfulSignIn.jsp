@@ -6,7 +6,7 @@
 <meta HTTP-EQUIV="REFRESH" content="5; url=http://localhost:8080/CareerServicesProject/StudentSignIn">
 <style>
 body{
-    background-color: #CCFFFF;
+    background-color: #8BA2E5;
 }
 @keyframes fadein {
     0%{
@@ -27,7 +27,6 @@ body{
     100%{
       opacity: 1;
     }
-
 
 }
 #main{
@@ -75,18 +74,19 @@ h1{
 		<p>${arrival}</p>
 		<p>${enTime}</p>
 		<p>${enStat}</p>
+		<p>${career}</p>
 		<p>${careerCounseling}</p>
-		<p>${jobSearching}</p>
-		<p>${resume}</p>
-		<p>${coverLetter}</p>
-		<p>${mockInterview}</p>
-		<p>${internshipInformation}</p>
-		<p>${transitionToKean}</p>
-		<p>${sophomoreSeminar}</p>
-		<p>${juniorSeminar}</p>
-		<p>${seniorSeminar}</p>
 		<p>${copsTest}</p>
+		<p>${coverLetter}</p>
+		<p>${internshipInformation}</p>
+		<p>${jobSearching}</p>
+		<p>${juniorSeminar}</p>
+		<p>${mockInterview}</p>
 		<p>${myersbriggs}</p>
+		<p>${resume}</p>					
+		<p>${seniorSeminar}</p>
+		<p>${sophomoreSeminar}</p>
+		<p>${transitionToKean}</p>							
 		<p>${approved}</p>
 		<p> -->
 	</body>
