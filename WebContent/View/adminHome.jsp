@@ -25,14 +25,14 @@ div#second{
 }
 
 body{
-  background-color: #CCFFFF;
+  background-color: #8BA2E5;
 }
 .buttonView {
     background-color: #FF0569;
     color: White;
     padding: 14px 20px;
     margin: 10px 0;
-    border: none;
+    border: 4px solid #ccc;
     border-radius:20px;
     cursor: pointer;
     width: 25%;
@@ -48,7 +48,7 @@ body{
     color: White;
     padding: 14px 20px;
     margin: 10px 0;
-    border: none;
+    border: 4px solid #ccc;
     border-radius:20px;
     cursor: pointer;
     width: 25%;
@@ -60,11 +60,27 @@ body{
     text-align: center;
 }
 .buttonLogout {
-    background-color: #FF9B05;
+    background-color: #16E210;
     color: White;
     padding: 14px 20px;
     margin: 10px 0;
-    border: none;
+    border: 4px solid #ccc;
+    border-radius:20px;
+    cursor: pointer;
+    width: 25%;
+    font-size: 117%;
+    top: 60%;
+    left: 44%;
+    margin-top: -50px;
+    margin-left: -50px;
+    text-align: center;
+}
+.buttonClear {
+    background-color: #F31207;
+    color: White;
+    padding: 14px 20px;
+    margin: 10px 0;
+    border: 4px solid #ccc;
     border-radius:20px;
     cursor: pointer;
     width: 25%;
@@ -96,7 +112,7 @@ h5{
     <br><br><br><br><br>
 	<a href="View/Search.jsp" class="buttonView">Search for Students and Approve/Update Appointments</a>
 	<br><br><br><br><br>
-	<a href="ClearTable" class="buttonView">Clear The Database(Only click if the records have been saved)</a>
+	<a href="ClearTable" class="buttonClear">Clear The Database(Only click if the records have been saved)</a>
 	<br><br><br><br><br>
 	<a href="Login" class="buttonLogout">Log out</a>
 	<p>${tableCleared}</p>
