@@ -24,7 +24,7 @@ div#second{
   left:0;
 }
 body{
-  background-color: #CCFFFF;
+  background-color: #8BA2E5;
 }
 h2 {
     background-color: #FF9B05;
