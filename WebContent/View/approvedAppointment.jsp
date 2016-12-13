@@ -29,6 +29,22 @@
     border-radius:10px;
     box-sizing: border-box;
 }
+.text1{
+    width: 15%;
+    background-color:#16E210;
+    padding: 8px 2px;
+    margin: 5px 0;
+    display: inline-block;
+    border: 4px solid #ccc;
+    border-radius:10px;
+    box-sizing: border-box;width: 10%;
+    padding: 8px 2px;
+    margin: 5px 0;
+    display: inline-block;
+    border: 4px solid #ccc;
+    border-radius:10px;
+    box-sizing: border-box;
+}
     </style>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
