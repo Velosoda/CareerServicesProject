@@ -66,7 +66,7 @@ h4 {
 
 }
 body{
-  background-color: #CCFFFF;
+  background-color: #8BA2E5;
 }
 img.avatar {
     width: 17%;
@@ -202,11 +202,12 @@ Email Address:
 
 <form action="" method="get">
 <label><input name="choice" type="checkbox" value="" />Career Counseling </label>
-<label><input name="choice" type="checkbox" value="" />Job Searching </label>
-<label><input name="choice" type="checkbox" value="" />Resume </label>
 <label><input name="choice" type="checkbox" value="" />Cover letter </label>
-<label><input name="choice" type="checkbox" value="" />Mock Interview </label>
 <label><input name="choice" type="checkbox" value="" />Internship Information </label>
+<label><input name="choice" type="checkbox" value="" />Job Searching </label>
+<label><input name="choice" type="checkbox" value="" />Mock Interview </label>
+<label><input name="choice" type="checkbox" value="" />Resume </label>
+
 <input type="text" name="choice" value="">
 </form>
 
